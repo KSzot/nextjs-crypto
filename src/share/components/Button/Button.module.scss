@@ -1,0 +1,81 @@
+@import '@/share/styles/main.scss';
+
+.custom_button {
+  padding: 1.6rem 3.2rem;
+  border-radius: 0.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: $paper-light;
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease-in-out,
+    transform 0.2s ease-in-out,
+    border-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  &__primary {
+    background-color: $primary-main;
+    box-shadow: 2px 6px 14px 3px $text-secondary;
+
+    &:hover {
+      background-color: rgba(106, 27, 154, 0.9);
+    }
+
+    &:active {
+      background-color: $primary-main;
+    }
+
+    &:disabled {
+      background-color: $primary-light;
+      cursor: not-allowed;
+    }
+  }
+
+  &__gold {
+    background-color: $secondary-main;
+    box-shadow: 1px 2px 14px 1px $text-disabled;
+
+    &:hover {
+      background-color: rgba(255, 111, 0, 0.8);
+    }
+
+    &:active {
+      background-color: $secondary-main;
+    }
+
+    &:disabled {
+      background-color: $secondary-light;
+      cursor: not-allowed;
+    }
+  }
+  &__outline {
+    background-color: transparent;
+    border: 1px solid $primary-light;
+    color: $primary-light;
+
+    &:hover {
+      border-color: rgba(156, 39, 176, 0.9);
+      color: rgba(156, 39, 176, 0.9);
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid $text-disabled;
+      color: $text-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
