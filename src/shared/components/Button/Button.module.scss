@@ -1,10 +1,10 @@
-@import '@/share/styles/main.scss';
+@import '@/shared/styles/main.scss';
 
 .custom_button {
-  padding: 1.6rem 3.2rem;
+  padding: 1rem 2.2rem;
   border-radius: 0.6rem;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: $paper-light;
   font-weight: 600;
   display: flex;
@@ -17,6 +17,15 @@
     transform 0.2s ease-in-out,
     border-color 0.25s ease-in-out,
     color 0.25s ease-in-out;
+
+  @include respond(tab-port) {
+    padding: 1.2rem 2.6rem;
+    font-size: 1.6rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 1.2rem 3rem;
+  }
 
   &:active:not(:disabled) {
     transform: scale(0.98);

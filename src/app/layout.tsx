@@ -1,3 +1,4 @@
+import { Navbar } from '@/components';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -19,7 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body
+        className={montserrat.className}
+        suppressHydrationWarning // This prevents extensions from causing a server/client mismatch
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
